@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas de Carros Esportivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Carrossel de Banners -->
+    <div class="carrossel-container">
+        <div class="carrossel" id="carrossel">
+            <div class="carro-banner">
+                <img src="carro1.jpg" alt="Carro 1">
+                <div class="info-carro">
+                    <h2>Ferrari 488</h2>
+                    <p>R$ 2.500.000</p>
+                    <button class="comprar" onclick="adicionarAoCarrinho('Ferrari 488', 2500000)">Comprar</button>
+                </div>
+            </div>
+            <div class="carro-banner">
+                <img src="carro2.jpg" alt="Carro 2">
+                <div class="info-carro">
+                    <h2>Lamborghini Huracán</h2>
+                    <p>R$ 3.000.000</p>
+                    <button class="comprar" onclick="adicionarAoCarrinho('Lamborghini Huracán', 3000000)">Comprar</button>
+                </div>
+            </div>
+            <div class="carro-banner">
+                <img src="c:\Users\Aluno\Downloads\download.jpeg" alt="Carro 3">
+                <div class="info-carro">
+                    <h2>McLaren 720S</h2>
+                    <p>R$ 2.200.000</p>
+                    <button class="comprar" onclick="adicionarAoCarrinho('McLaren 720S', 2200000)">Comprar</button>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="moverCarrossel(-1)">&#10094;</button>
+        <button class="next" onclick="moverCarrossel(1)">&#10095;</button>
+    </div>
+
+    <!-- Carrinho de Compras -->
+    <div class="carrinho">
+        <h3>Carrinho de Compras</h3>
+        <ul id="carrinho-list"></ul>
+        <p>Total: R$ <span id="total">0</span></p>
+        <button onclick="finalizarCompra()">Finalizar Compra</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
