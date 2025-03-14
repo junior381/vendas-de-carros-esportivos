@@ -1,118 +1,117 @@
-/* Estilos gerais */
+/* Reset de estilos básicos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body e Fontes */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
+/* Container principal para centralizar conteúdo */
+.container {
+    width: 80%;
     margin: 0 auto;
 }
 
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
 header .logo img {
-    width: 60px;
+    width: 150px;
     height: auto;
 }
 
 header h1 {
-    font-size: 28px;
+    font-size: 36px;
+    margin: 10px 0;
 }
 
-header nav ul {
-    display: flex;
+nav ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
 }
 
-header nav ul li {
-    margin-left: 20px;
+nav ul li {
+    display: inline;
 }
 
-header nav ul li a {
-    color: white;
+nav ul li a {
     text-decoration: none;
+    color: white;
     font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
 }
 
 .hero {
-    background-color: #333;
+    background-color: #000;
     color: white;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    padding: 80px 0;
 }
 
 .hero h2 {
-    font-size: 40px;
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 20px;
 }
 
+/* Seção de Carros */
 .carros-section {
-    padding: 40px 20px;
-    background-color: #0b0909;
+    background-color: #fff;
+    padding: 40px 0;
     text-align: center;
+}
+
+.carros-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
 .carousel-container {
     position: relative;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
     overflow: hidden;
 }
 
 .carousel {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    gap: 10px;
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
-    width: 100%;
-    flex-shrink: 0;
+    min-width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 .carousel-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
-}
-
-.carousel-item .btn-comprar {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background-color: #007bff;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.carousel-item .btn-comprar:hover {
-    background-color: #0056b3;
 }
 
 .carousel-controls {
@@ -126,99 +125,435 @@ header nav ul li a {
 
 .carousel-controls button {
     background-color: rgba(0, 0, 0, 0.5);
-    color: #000000;
+    color: white;
     border: none;
+    font-size: 30px;
     padding: 10px;
     cursor: pointer;
-    font-size: 18px;
 }
 
 .carousel-controls button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Estilo da seção de compra */
+/* Seção de Compra */
 .compra-section {
-    padding: 60px 20px;
-    background-color: #191616;
-    text-align: center;
+    background-color: #f4f4f4;
+    padding: 40px 0;
 }
 
 .compra-container {
-    background-color: #ffffff0b;
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .compra-container h2 {
+    text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
 .compra-container p {
     font-size: 18px;
-    margin-bottom: 40px;
-    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
-    width: 100%;
 }
 
 .form-group label {
-    font-size: 18px;
     display: block;
-    margin-bottom: 10px;
-}
-
-.form-group select,
-.form-group input {
-    padding: 12px 20px;
     font-size: 16px;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border 0.3s;
+    margin-bottom: 8px;
 }
 
-.form-group select:focus,
-.form-group input:focus {
-    border-color: #007bff;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
 button[type="submit"] {
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: rgb(0, 0, 0);
-    font-size: 18px;
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #ff4500;
 }
 
+/* Seção de Contato */
+.contato-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.contato-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contato-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Rodapé */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 20px 0;
 }
 
 footer p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
-/* Animação do título */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel-item {
+        min-width: 80%;
+    }
+
+    .compra-container {
+        width: 90%;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
 }
+/* Estilos para o campo de pesquisa */
+.search-container {
+    position: absolute;
+    top: 20px; /* Ajuste a distância do topo */
+    right: 20px; /* Ajuste a distância da direita */
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    width: 250px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    margin-right: 10px;
+    transition: border 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border: 2px solid #ff6347;
+}
+
+.search-btn {
+    background-color: #ff6347;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-btn i {
+    color: white;
+    font-size: 20px;
+}
+
+.search-btn:hover {
+    background-color: #ff4500;
+}
+
+.search-container input::placeholder {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Responsividade - Pesquisa em telas menores */
+@media (max-width: 768px) {
+    .search-container {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+}
+/* Estilos para a seção de empresas parceiras */
+.parceiros-section {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.parceiros-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.parceiros-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.parceiro img {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.parceiro img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .parceiros-container {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+/* Estilos para a seção de empresas parceiras */
+.parceiros-section {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.parceiros-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.parceiros-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Garantir 4 colunas */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.parceiro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parceiro img {
+    width: 100%;  /* Garantir que ocupe 100% da largura da célula */
+    height: auto;
+    max-width: 200px; /* Limitar o tamanho máximo das imagens */
+    object-fit: contain; /* Para manter a proporção das imagens */
+    transition: transform 0.3s ease;
+}
+
+.parceiro img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para a seção de empresas parceiras */
+.parceiros-section {
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.parceiros-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.parceiros-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para desktop */
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+
+.parceiro img {
+    width: 100%;           /* Ocupa 100% da largura da célula */
+    height: 150px;         /* Define uma altura fixa */
+    object-fit: cover;     /* Faz com que as imagens cubram completamente o espaço, cortando o excesso, se necessário */
+    transition: transform 0.3s ease;
+}
+
+.parceiro img:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Responsividade - Ajusta para 2 colunas em telas menores */
+@media (max-width: 768px) {
+    .parceiros-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+    }
+
+    .parceiro img {
+        height: 120px; /* Reduz a altura das imagens em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .parceiros-container {
+        grid-template-columns: 1fr; /* 1 coluna para celulares */
+    }
+
+    .parceiro img {
+        height: 100px; /* Reduz ainda mais a altura em telas muito pequenas */
+    }
+}
+
+/* Estilos para a seção de carros */
+.carros-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.carros-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que o carrossel se ajuste em telas menores */
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* Largura fixa para cada item */
+    text-align: center;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover {
+    transform: scale(1.05); /* Efeito de hover */
+}
+
+/* Garantir que todas as imagens tenham a mesma largura e altura */
+.carousel-item img {
+    width: 100%;
+    height: 250px; /* Definindo a altura fixa para todas as imagens */
+    object-fit: cover; /* Faz com que a imagem ocupe a área sem distorcer */
+    margin-bottom: 15px; /* Espaço entre a imagem e o conteúdo abaixo */
+}
+
+.carro-info {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px; /* Ajusta a altura da área de texto */
+}
+
+.descricao {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Garante que o botão fique na parte inferior da área de texto */
+}
+
+.btn-comprar:hover {
+    background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 45%; /* Ajusta a largura das imagens em telas menores */
+    }
+
+    .carousel-item img {
+        height: 200px; /* Ajusta a altura das imagens */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        width: 80%; /* Ajusta a largura em telas muito pequenas */
+    }
+
+    .carousel-item img {
+        height: 150px; /* Ajusta a altura das imagens para celulares */
+    }
+}
+
+
+
