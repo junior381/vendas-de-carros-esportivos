@@ -76,72 +76,14 @@ nav ul li a:hover {
 }
 
 /* Seção de Carros */
-.carros-section {
-    background-color: #fff;
-    padding: 40px 0;
-    text-align: center;
-}
-
-.carros-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.carousel-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    min-width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.carousel-controls button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 30px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.carousel-controls button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
 /* Seção de Compra */
 .compra-section {
     background-color: #f4f4f4;
     padding: 40px 0;
+    text-align: center;
 }
 
+/* Container dentro da seção de compra */
 .compra-container {
     max-width: 600px;
     margin: 0 auto;
@@ -149,30 +91,36 @@ nav ul li a:hover {
     padding: 30px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    min-height: 400px; /* Garante uma altura mínima para a área de compra */
 }
 
+/* Título da seção de compra */
 .compra-container h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
 }
 
+/* Descrição do carro dentro da compra */
 .compra-container p {
     font-size: 18px;
     text-align: center;
     margin-bottom: 20px;
 }
 
+/* Formulário de compra */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Labels dos campos do formulário */
 .form-group label {
     display: block;
     font-size: 16px;
     margin-bottom: 8px;
 }
 
+/* Campos de entrada no formulário */
 .form-group input,
 .form-group select {
     width: 100%;
@@ -182,6 +130,7 @@ nav ul li a:hover {
     border: 1px solid #ddd;
 }
 
+/* Botão de envio do formulário */
 button[type="submit"] {
     background-color: #ff6347;
     color: white;
@@ -194,9 +143,85 @@ button[type="submit"] {
     margin-top: 20px;
 }
 
+/* Hover no botão de envio */
 button[type="submit"]:hover {
     background-color: #ff4500;
 }
+
+/* Responsividade para a área de compra */
+@media (max-width: 768px) {
+    .compra-container {
+        width: 90%;
+    }
+}
+
+
+/* Estilo para o item do carrossel */
+.carousel-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; /* Largura fixa */
+    text-align: center;
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    height: auto; /* Ajuste automático da altura para acomodar o conteúdo */
+}
+
+/* Garantir que a imagem do carrossel tenha uma altura consistente */
+.carousel-item img {
+    width: 100%;
+    height: 250px; /* Definindo uma altura fixa para a imagem */
+    object-fit: cover; /* A imagem cobre o espaço sem distorcer */
+    margin-bottom: 15px;
+}
+
+/* Estilo da área de informações do carro */
+.carro-info {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Ajustando para altura dinâmica conforme o conteúdo */
+}
+
+/* Estilo do botão de compra */
+.btn-comprar {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Garante que o botão fique na parte inferior da área de texto */
+}
+
+/* Ajustes no hover do botão */
+.btn-comprar:hover {
+    background-color: #218838;
+}
+
+/* Ajustes para a seção de compra */
+.compra-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-height: 400px; /* Garante altura mínima para acomodar o botão */
+}
+
+
 
 /* Seção de Contato */
 .contato-section {
@@ -555,5 +580,140 @@ footer p {
     }
 }
 
+/* Adicionando uma animação de desvanecimento e deslizamento para a seção de compra */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seção de Compra */
+.compra-section {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Container dentro da seção de compra com animação */
+.compra-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    min-height: 400px; /* Garante uma altura mínima para a área de compra */
+    animation: slideIn 0.8s ease-out; /* Animação de slide-in ao carregar */
+}
+
+/* Título da seção de compra */
+.compra-container h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Descrição do carro dentro da compra */
+.compra-container p {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulário de compra */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Labels dos campos do formulário */
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Campos de entrada no formulário */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease; /* Efeito de transição nos campos */
+}
+
+/* Efeito de foco nos campos */
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #ff6347; /* Bordas vermelhas ao focar */
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Efeito de foco */
+}
+
+/* Botão de envio do formulário */
+button[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Animação no hover */
+}
+
+/* Efeito de hover no botão de envio */
+button[type="submit"]:hover {
+    background-color: #ff4500;
+    transform: scale(1.05); /* Efeito de aumento no botão */
+}
+
+/* Responsividade para a área de compra */
+@media (max-width: 768px) {
+    .compra-container {
+        width: 90%;
+    }
+}
+
+/* Animação de "pulse" para o botão de compra */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Expande o botão */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho original */
+    }
+}
+
+/* Efeito de pulse no botão de compra */
+button[type="submit"]:hover {
+    background-color: #ff4500;
+    transform: scale(1.05); /* Efeito de aumento */
+    animation: pulse 0.6s ease-out; /* Animação de pulse ao passar o mouse */
+}
+
+/* Botão de envio do formulário */
+button[type="submit"] {
+    background-color: #ff6347;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
 
 
